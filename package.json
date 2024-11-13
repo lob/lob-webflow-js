@@ -4,9 +4,15 @@
   "description": "",
   "main": "lobwebflow.js",
   "scripts": {
-    "minify": "terser lobwebflow.js -o lobwebflow.min.js"
+    "minify": "npm run minify-js && npm run minify-css",
+    "minify-js": "mkdir -p dist/js && for file in src/js/*.js; do terser \"$file\" -o \"dist/js/$(basename \"$file\" .js).min.js\"; done",
+    "minify-css": "mkdir -p dist/css && for file in src/css/*.css; do csso \"$file\" --output \"dist/css/$(basename \"$file\" .css).min.css\"; done"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "terser": "^5.36.0"
+  }
 }
