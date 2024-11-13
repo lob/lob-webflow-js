@@ -1,4 +1,7 @@
 $(document).ready(function () {
-  console.log("s'tarter");
-  console.log($("body"));
+  if (typeof MktoForms2 !== "undefined") {
+    console.log("MktoForms2 exists!");
+  } else {
+    console.log("MktoForms2 does not exist");
+  }
 });
