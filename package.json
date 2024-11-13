@@ -1,0 +1,12 @@
+{
+  "name": "lob_webflow_custom_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lobwebflow.js",
+  "scripts": {
+    "minify": "terser lobwebflow.js -o lobwebflow.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
