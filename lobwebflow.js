@@ -1,4 +1,4 @@
 $(document).ready(function () {
-  console.log("starter");
-  console.log($(body));
+  console.log("s'tarter");
+  console.log($("body"));
 });
