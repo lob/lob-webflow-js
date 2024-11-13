@@ -90,3 +90,17 @@ NAVBAR
     left: 0px;
   }
 }
+
+/**
+
+Footer ?
+
+**/
+
+.footer-links-column {
+  transition: all 0.3s ease-in-out;
+}
+.footer-links-heading:has(input.toggle-footer-menu-input:checked)
+  + .footer-links-column {
+  max-height: 500px;
+}
